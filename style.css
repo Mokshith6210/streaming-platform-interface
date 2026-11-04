@@ -1,0 +1,200 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background-color: #181818;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+/* Featured Banner */
+.banner {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 50px 7%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.35)
+    ),
+    linear-gradient(120deg, #263b63, #752d42);
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+h1 {
+    color: #e50914;
+    font-size: 40px;
+}
+
+/* Specificity: this selector overrides the h1 rule above */
+.banner .title {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.play-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e50914;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: #b20710;
+}
+
+/* Shows Section */
+.shows-section {
+    padding: 40px 7%;
+}
+
+.shows-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Flexbox Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Show Card */
+.card {
+    position: relative;
+    flex: 1 1 220px;
+    max-width: 280px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* New Badge using Attribute Selector */
+.card[data-new="true"]::after {
+    content: "NEW";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e50914;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Show Images */
+.show-image {
+    height: 160px;
+}
+
+.image-one {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+}
+
+.image-two {
+    background: linear-gradient(135deg, #3a0ca3, #7209b7);
+}
+
+.image-three {
+    background: linear-gradient(135deg, #0077b6, #48cae4);
+}
+
+.image-four {
+    background: linear-gradient(135deg, #6a040f, #dc2f02);
+}
+
+/* Card Text */
+.card h3 {
+    padding: 15px 15px 5px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #181818;
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner .title {
+        font-size: 30px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+}
